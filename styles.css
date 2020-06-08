@@ -15,6 +15,7 @@ h5,
 h6 {
   font-weight: bold;
   text-align: center;
+  margin: 0;
 }
 .dark {
   --primary: #2d3748;
@@ -22,6 +23,7 @@ h6 {
   --secondary-hover: #cbd5e0;
   --info: #a56c16;
   --info-hover: #935a05;
+  --success: #48bb78;
 }
 .light {
   --primary: #e2e8f0;
@@ -29,6 +31,7 @@ h6 {
   --secondary-hover: #1a202c;
   --info: #744210;
   --info-hover: #56300a;
+  --success: #38a169;
 }
 #themeSelect,
 #printer {
@@ -98,15 +101,41 @@ section a:hover {
 }
 .skills {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
 }
+.skills-item {
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+progress {
+  border-radius: 2px;
+  margin: 0.5rem 0;
+  width: 100%;
+  height: 1rem;
+}
+progress::-webkit-progress-bar {
+  background-color: var(--secondary);
+}
+progress::-webkit-progress-value {
+  background-color: var(--success);
+}
 @media screen and (min-width: 1024px) {
   .container {
-    padding: 0 4rem;
+    padding: 0 6rem;
   }
   #profilePic {
     margin: 0 3rem;
+  }
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
   }
 }
