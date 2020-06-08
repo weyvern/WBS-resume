@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+html {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  text-align: center;
+}
+.dark {
+  --primary: #2d3748;
+  --secondary: #e2e8f0;
+  --secondary-hover: #cbd5e0;
+  --info: #b7791f;
+}
+.light {
+  --primary: #e2e8f0;
+  --secondary: #2d3748;
+  --secondary-hover: #1a202c;
+  --info: #744210;
+}
+#themeSelect,
+#printer {
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+body {
+  margin: 2rem;
+  padding: 0;
+  background-color: var(--primary);
+  color: var(--secondary);
+  transition: all 0.5s;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  transition: color 0.3s;
+}
+a:hover {
+  color: var(--secondary-hover);
+}
+header img {
+  max-width: 200px;
+  border-radius: 50%;
+  border: 0.3rem solid var(--secondary);
+}
+.contact-data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contact-data * {
+  margin: 0.5rem;
+}
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+.divider {
+  width: 90%;
+  height: 0.1rem;
+  background-color: var(--secondary);
+  margin: 1rem auto;
+}
+.job-title,
+.company {
+  text-align: justify;
+  color: var(--info);
+}
+section p {
+  text-align: justify;
+}
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+  }
+  #profilePic {
+    margin: 0 3rem;
+  }
+}
