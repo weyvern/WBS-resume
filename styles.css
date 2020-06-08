@@ -20,13 +20,15 @@ h6 {
   --primary: #2d3748;
   --secondary: #e2e8f0;
   --secondary-hover: #cbd5e0;
-  --info: #b7791f;
+  --info: #a56c16;
+  --info-hover: #935a05;
 }
 .light {
   --primary: #e2e8f0;
   --secondary: #2d3748;
   --secondary-hover: #1a202c;
   --info: #744210;
+  --info-hover: #56300a;
 }
 #themeSelect,
 #printer {
@@ -57,7 +59,7 @@ a:hover {
   color: var(--secondary-hover);
 }
 header img {
-  max-width: 200px;
+  max-width: 150px;
   border-radius: 50%;
   border: 0.3rem solid var(--secondary);
 }
@@ -84,8 +86,15 @@ header img {
   text-align: justify;
   color: var(--info);
 }
-section p {
+section p,
+p {
   text-align: justify;
+}
+section a {
+  color: var(--info);
+}
+section a:hover {
+  color: var(--info-hover);
 }
 .skills {
   display: grid;
